@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Document</title>
+    <title>Akan Names Project</title>
 </head>
 <body style="background-size: cover; background-repeat: no-repeat; background-image: url(./week2.jpg)"> 
     
@@ -17,17 +17,43 @@
         <div class="card" style="background-color: rgba(220, 43, 226, 0.904);">
             <div class="card-body">
                 <div class="jumbotron" style="background-color: rgb(46, 43, 226);">
-                <h1 style="font-style: inherit; color: rgb(226, 12, 226); font-size: 40px;">Aka Names Project</h1>
-
+                <h1 style="font-style: inherit; color: rgb(226, 12, 226); font-size: 40px;">Akan Names Project</h1>
             </div>
-    <h3 style="color: rgb(13, 19, 8);">Calculate  Name from Date of Birth<br><br></h3>
+    <form class="form" onsubmit="return getName()">
 
-    <b style="color: rgb(15, 15, 14);">Enter Date of Birth:<input type=date id =DOB></b>
-    <label style="color: rgba(13, 14, 12, 0.973);" for="Gender">Gender</label><input type="text" name="Gender">
-    <button type="submit" onclick = "ageCalculator()">Submit</button> <br><br>
+    <label for="day-of-birth">
+        DAY:
+        <input id="day" type="number" name="day-of-birth" placeholder="DOB" value="" required> 
+    </label>
+
+    <label for="month-of-birth">
+        MONTH:
+        <input id="month" type="number" name="month-of-birth" placeholder="MOB" value="" required> 
+    </label>
+
+    <label for="year of birth">
+        YEAR:
+        <input id="year" type="number" name="year-of-birth" placeholder="YOB" value="" required>
+    </label>
+    <h3>Gender</h3>
+    <label for="gender">
+        MALE:
+        <input id="male" type="radio" name ="gender" value="male" required>
+        FEMALE:
+        <input id="female" type="radio" name="gender" value="female" required>
+    </label>
+    <input type="submit" name="submit" value="calculate name">
+</form>
+
+    <form onsubmit="return clear()">
+        <input type="submit" value="Delete" style="margin-left: 160px; color: hsl(303, 88%, 50%);">
+      </form>
     
-    
-    <h3 style="color: rgb(30, 255, 0);" id="output"></h3>
+
+      <p>Kindly click on the "calculate" button to display your name</p>
+       
+    <h3 style="color: rgb(245, 14, 110);" id="output"></h3>
+        
 </div>
     </div>
 </div>
