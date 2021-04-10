@@ -1,10 +1,9 @@
 function nameCalculator() { 
-  var dayOfBirth = Number(document.getElementById("day").value);
-  var monthOfBirth = Number(document.getElementById("month").value);
+ var  dayOfBirth = Number(document.getElementById("day").value);
+  var  monthOfBirth = Number(document.getElementById("month").value);
   var yearOfBirth = Number(document.getElementById("year").value); 
   var genders = document.getElementsByClassName("gender");
 }
-    
 
 //gender validation code
 function gender()
@@ -21,19 +20,19 @@ var genderType = gender();
 alert(genderType)
 
 
-//birth day validation code
-function birthDay()
-{
-    if (dayOfBirth <= 31 && dayOfBirth > 0)
-    {
-      return true;
-    }
-    else if (dayOfBirth > 31 && monthOfBirth < 0)
-    {
-    return false;
-    }
 
-  }
+//Year of birth validation code>>>>>>>>!
+function birthYear()
+{
+ if (yearOfBirth > 1900 && yearOfBirth <=2021)
+ {
+ return true; 
+ }
+ else{
+   return false;
+ }
+}
+
 //month of birth validation code>>>>>>>>!
 function birthMonth()
 {
@@ -49,17 +48,20 @@ function birthMonth()
 }
 
 
-//Year of birth validation code>>>>>>>>!
-function birthYear()
+
+//birth day validation code
+function birthDay()
 {
- if (yearOfBirth > 1900 && yearOfBirth <=2021)
- {
- return true; 
- }
- else{
-   return false;
- }
-}
+    if (dayOfBirth <= 31 && dayOfBirth > 0)
+    {
+      return true;
+    }
+    else if (dayOfBirth > 31 && monthOfBirth < 0)
+    {
+    return false;
+    }
+
+  }
 
 
 
