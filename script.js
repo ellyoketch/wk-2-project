@@ -1,25 +1,27 @@
-function ageCalculator() {  
-  var userinput = document.getElementById("DOB").value;  
-  var dob = new Date(userinput);  
-  if(userinput==null || userinput=='') {  
-    document.getElementById("message").innerHTML = "**Choose a date please!";    
-    return false;   
-  } else {  
+function nameCalculator() { 
+  let dayOfBirth = number(document.getElementById("day").value);
+  let monthOfBirth = number(document.getElementById("month").value);
+  let yearOfBirth = number(document.getElementById("year").value); 
+  let gender = document.getElementsByClassName("gender");
+}
     
-  //calculate month difference from current date in time  
-  var month_diff = Date.now() - dob.getTime();  
-    
-  //convert the calculated difference in date format  
-  var age_dt = new Date(month_diff);   
-    
-  //extract year from date      
-  var year = age_dt.getUTCFullYear();  
-    
-  //now calculate the age of the user  
-  var age = Math.abs(year - 1970);  
-    
-  //display the calculated age  
-  return document.getElementById("result").innerHTML =    
-           "Age is: " + age + " years. ";  
-  }  
-}  
+
+//gender validation code
+function gender(male, female){
+  m = 0;
+  if (male.checked){
+    m++;
+  }
+  if(female.ckecked){
+    m++;
+  }
+  if(m==0){
+    alert("please select your gender!");
+    male.focus();
+    return false;
+  }
+  else{
+    alert("gender selected successfully");
+    window.location.reload()
+    return true;}
+  }

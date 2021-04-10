@@ -19,7 +19,7 @@
                 <div class="jumbotron" style="background-color: rgb(46, 43, 226);">
                 <h1 style="font-style: inherit; color: rgb(226, 12, 226); font-size: 40px;">Akan Names Project</h1>
             </div>
-    <form class="form" onsubmit="return getName()">
+    <form class="form" onsubmit="return nameCalculator()">
 
     <label for="day-of-birth" style="color: pink;">
         DAY:
@@ -36,7 +36,7 @@
         <input id="year" type="number" name="year-of-birth" placeholder="YOB" value="" required>
     </label>
     <p style="color: pink;">Please select your gender here.</p>
-    <label for="gender" style="color: pink;">
+    <label class="gender" for="gender" style="color: pink;">
         MALE:
         <input id="male" type="radio" name ="gender" value="male" required>
         FEMALE:
