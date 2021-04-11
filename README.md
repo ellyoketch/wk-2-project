@@ -17,6 +17,9 @@ The Akan people of Ghana frequently name their children after the day of the wee
 * Bootstrap
 ## Support and contact details
 * Email: ellyoketch34@gmail.com
+*        ellyoketch.student.moringaschool.com
+* Slack: @ellyoketch  
+* Phone: 0798532043/0756590598
 Copyright (c) [MIT] **Elly Oketch** 
 ### License
 This project is under the [MIT](LICENSE)license 
