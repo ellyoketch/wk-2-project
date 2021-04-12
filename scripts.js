@@ -35,6 +35,8 @@ var yearOfBirth = document.getElementById("year");
  }
 }
 
+
+
 //month of birth validation code>>>>>>>>!
 function birthMonth(){
 var monthOfBirth = document.getElementById("month");
@@ -74,12 +76,10 @@ else
   if (genderType == "male" && myDay && myMonth && myYear)
   {
     document.getElementById("output").textContent = "Born on" + weekDays[index] + ", your mane is" + maleNames[index];
-    return false;
   }
   else if (genderType == "female" && myDay && myMonth && myYear)
   {
     document.getElementById("output").textContent = "Born on" + weekDays[index] + ", your mane is" + femaleNames[index];
-    return false;
   }
   else
   {
