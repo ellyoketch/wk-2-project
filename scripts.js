@@ -1,6 +1,6 @@
 //gender validation code
 function gender()
-var genders = document.getElementsByClassName("gender");
+var genders = document.getElementsByClassName("genders");
 {
   for (var gender of genders)
   {
