@@ -1,25 +1,27 @@
+// Arithmetic to determine the day of birth
+var weekDays = Math.floor((((Number(yearOfBirth.slice(0,2))/4)-2*Number(yearOfBirth.slice(0,2))-1)+
+((5*Number(yearOfBirth.slice(2,4))/4))+((26*(monthOfBirth+1)/10))+dayOfBirth)%7);
+var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "kofi","Kwame"];
+var femaleNames = ["Akosua", "Adwoa", "Abenna", "Akua", "Yaa", "Afua", "Ama"];
+//validating variables
+var myDay = birthDay();
+var myMonth = birthMonth();
+var myYear = birthYear();
 //gender validation code
-function gender()
-var genders = document.getElementsByClassName("genders");
-{
-  for (var gender of genders)
-  {
+function gender(){
+var genders = document.getElementsByClassName("genders")
     if (gender.checked)
     {
       return gender.value;
     }
   }
-}
 var genderType = gender();
 alert(genderType)
-
-
-
 //Year of birth validation code>>>>>>>>!
-function birthYear()
-var yearOfBirth = Number(document.getElementById("year").value); 
-{
- if (yearOfBirth > 1900 && yearOfBirth <=2021)
+function birthYear(){
+var yearOfBirth = document.getElementById("year"); 
+ if (yearOfBirth <=0 && yearOfBirth <=2022)
  {
  return true; 
  }
@@ -28,28 +30,21 @@ var yearOfBirth = Number(document.getElementById("year").value);
    return false;
  }
 }
-
 //month of birth validation code>>>>>>>>!
-function birthMonth()
-var monthOfBirth = (document.getElementById("month").value);
-{
+function birthMonth(){
+var monthOfBirth = document.getElementById("month");
   if (monthOfBirth > 1 && monthOfBirth <= 12)
   {
   return true;
   }
   else (monthOfBirth > 12 && monthOfBirth < 0)
-  
   {
     return false;
   }
 }
-
-
-
 //birth day validation code
-function birthDay()
-var  dayOfBirth = Number(document.getElementById("day").value);
-{
+function birthDay(){
+var  dayOfBirth = document.getElementById("day");
     if (dayOfBirth <= 31 && dayOfBirth > 0)
     {
       return true;
@@ -58,24 +53,7 @@ var  dayOfBirth = Number(document.getElementById("day").value);
     {
     return false;
     }
-
   }
-
-
-
-//validating variables
-var myDay = birthDay();
-var myMonth = birthMonth();
-var myYear = birthYear();
-
-// Arithmetic to determine the day of birth
-var weekDays = Math.floor((((Number(yearOfBirth.slice(0,2))/4)-2*Number(yearOfBirth.slice(0,2))-1)+
-((5*Number(yearOfBirth.slice(2,4))/4))+((26*(monthOfBirth+1)/10))+dayOfBirth)%7);
-
-var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "kofi","Kwame"];
-var femaleNames = ["Akosua", "Adwoa", "Abenna", "Akua", "Yaa", "Afua", "Ama"];
-
 //using index method to select items in the arrays 
 var index
 if (weekDay == 0)
