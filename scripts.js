@@ -4,10 +4,13 @@ var weekDays = Math.floor((((Number(yearOfBirth.slice(0,2))/4)-2*Number(yearOfBi
 var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "kofi","Kwame"];
 var femaleNames = ["Akosua", "Adwoa", "Abenna", "Akua", "Yaa", "Afua", "Ama"];
+
+
 //validating variables
 var myDay = birthDay();
 var myMonth = birthMonth();
 var myYear = birthYear();
+
 //gender validation code
 function gender(){
 var genders = document.getElementsByClassName("genders")
@@ -18,6 +21,7 @@ var genders = document.getElementsByClassName("genders")
   }
 var genderType = gender();
 alert(genderType)
+
 //Year of birth validation code>>>>>>>>!
 function birthYear(){
 var yearOfBirth = document.getElementById("year"); 
@@ -30,6 +34,7 @@ var yearOfBirth = document.getElementById("year");
    return false;
  }
 }
+
 //month of birth validation code>>>>>>>>!
 function birthMonth(){
 var monthOfBirth = document.getElementById("month");
@@ -42,6 +47,7 @@ var monthOfBirth = document.getElementById("month");
     return false;
   }
 }
+
 //birth day validation code
 function birthDay(){
 var  dayOfBirth = document.getElementById("day");
@@ -54,6 +60,7 @@ var  dayOfBirth = document.getElementById("day");
     return false;
     }
   }
+  
 //using index method to select items in the arrays 
 var index
 if (weekDay == 0)
